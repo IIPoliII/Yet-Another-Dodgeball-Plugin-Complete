@@ -1,6 +1,6 @@
 # Yet Another Dodgeball Plugin Complete
 This is a complete fork to install the plugin Yet Another Dodgeball Plugin on source mod Team Fotress 2 Server
-This is for helping players to install it in one time you need to add : 
+This is for helping players to install it in one time you need to add to your `server.cfg` file located under `tf/cfg/server.cfg` or `tf/cfg/tf2server.cfg` : 
 
 ```
 tf_dodgeball_enabled 1
