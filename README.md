@@ -7,7 +7,8 @@ tf_dodgeball_enabled 1
 tf_dodgeball_announcekill 1
 ```
 
-Copied from :
-https://github.com/blood-git/TF2-Dodgeball
-https://github.com/FlaminSarge/tf2attributes
-https://github.com/asherkin/TF2Items
+Yet Another Dodgeball Plugin : https://github.com/blood-git/TF2-Dodgeball
+
+TF2 attributes : https://github.com/FlaminSarge/tf2attributes
+
+TF2 items : https://github.com/asherkin/TF2Items
