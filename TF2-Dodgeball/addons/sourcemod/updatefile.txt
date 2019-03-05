@@ -1,0 +1,4 @@
+UPDATE_URL = http://savita-gaming.tk/updater/dodgeball/updatefile.txt
+
+http://savita-gaming.tk/updater/dodgeball/plugins/tf2_dodgeball.smx
+http://savita-gaming.tk/updater/dodgeball/scripting/tf2_dodgeball.sp
