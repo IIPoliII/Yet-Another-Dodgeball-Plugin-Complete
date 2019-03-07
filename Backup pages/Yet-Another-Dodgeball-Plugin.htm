@@ -1,0 +1,3964 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en"><head>
+	<meta http-equiv="x-ua-compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="generator" content="vBulletin">
+
+<meta name="keywords" content="[TF2] Yet Another Dodgeball Plugin v1.3.8 (1/19/2019), AMX Mod X,AMX Mod,Metamod,Half-Life Plugins,AMXX,AMX,Plugins,Counter-Strike,CSDM,Deathmatch,Servers,C++">
+<meta name="description" content="[TF2] Yet Another Dodgeball Plugin v1.3.8 (1/19/2019) Plugins">
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.7 CSS
+* Style: 'phpBB'; Style ID: 5
+*/
+body
+{
+	background: #E5E5E5;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 10px;
+	padding: 0px;
+}
+a:link, body_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #006699;
+}
+a:hover, a:active, body_ahover
+{
+	color: #DD6900;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 2px solid #006699;
+	
+}
+.tcat
+{
+	background: #C7D0D7 url(images/gradients/gradient_tcat.gif) repeat-x top left;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #006699;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #C7D0D7 url(images/gradients/gradient_thead.gif) repeat-x top left;
+	color: #FFFFFF;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #EDE1DC;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #EDE1DC;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #EDE1DC;
+	text-decoration: underline;
+}
+.tfoot
+{
+	background: #C7D0D7;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #006699;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #006699;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #006699;
+}
+.alt1, .alt1Active
+{
+	background: #EFEFEF;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #EFEFEF;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #D8D8D8;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #FFFFFF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #EFEFEF url(images/gradients/gradient_panel.gif) repeat-x top left;
+	color: #000000;
+	padding: 10px;
+	border: 1px solid #b2b2b2;
+}
+.panelsurround
+{
+	background: #FFFFFF url(images/gradients/gradient_panelsurround.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #EFEFEF;
+	color: #006699;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #006699;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #BBC7CE;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 10pt; font-weight: bold; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+.code 
+{
+ background-color: #DDDDDD;
+ color: #000000;
+}
+.main-page
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-left: 1px solid #98AAB1;
+  border-right: 1px solid #98AAB1;
+}
+
+.spacer-page
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  width: auto;
+  display: block;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+}
+
+.spacer-page-top
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  width: auto;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+  border-top: 1px solid #98AAB1;
+}
+
+.spacer-page-bottom
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+  border-bottom: 1px solid #98AAB1;
+}
+
+.bpost { background-color: #D1D7DC; border: 1px solid #FFFFFF; padding: 3px; }
+
+.ttop 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+  border-top: 2px solid #006699;
+}
+.tbottom 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+  border-bottom: 2px solid #006699;
+}
+.tinside 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+}
+
+.smalltext
+{
+  font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+  font-size: 11px;
+  height: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.bcrumbs
+{
+  font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+  font-size: 11px;
+  height: 12px;
+  padding: 0px;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+.bcrumbs a
+{
+  text-decoration: none;
+}
+.approve
+{
+  background: url(images/buttons/approve.gif) no-repeat;
+  padding: 0px;
+  margin: 0px;
+  width: 75px;
+  height: 18px;
+  border: 0px;
+  cursor: pointer;
+  float: left;
+}
+.unapprove
+{
+  background: url(images/buttons/unapprove.gif) no-repeat;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 2px;
+  width: 75px;
+  height: 18px;
+  border: 0px;
+  cursor: pointer;
+  float: right;
+}
+
+.home-links
+{
+  font-size: 10px;
+  text-decoration: none;
+  padding-right: 2px;
+}
+
+.home-links a
+{
+  font-size: 10px;
+  text-decoration: none;
+  padding-right: 2px;
+}
+
+
+.quote
+{
+  background-color: #FFF;
+  color: #000;
+}
+
+.alt3
+{
+  background-color: #DEE3E7;
+  color: #000;
+}
+.alt4
+{
+  background-color: #D1D7DC;
+  color: #000;
+}
+td, th, p, li, .smallfont { line-height: 1.2; }
+
+img.proxied-img { max-width: 100%; max-height: 400px; }
+</style>
+<link rel="stylesheet" type="text/css" href="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/vbulletin_important.css">
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/connection-min.js"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/vbulletin_global.js"></script>
+<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/vbulletin_menu.js"></script>
+<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/am_plugin_sys.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="AlliedModders RSS Feed" href="https://forums.alliedmods.net/external.php?type=RSS2">
+
+<link rel="alternate" type="application/rss+xml" title="AlliedModders - Plugins - RSS Feed" href="https://forums.alliedmods.net/external.php?type=RSS2&amp;forumids=108">
+
+
+	<title> [TF2] Yet Another Dodgeball Plugin v1.3.8 (1/19/2019) - AlliedModders</title>
+	<script type="text/javascript" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/vbulletin_post_loader.js"></script>
+</head>
+<body onload="if (document.body.scrollIntoView &amp;&amp; (window.location.href.indexOf('#') == -1 || window.location.href.indexOf('#post') > -1)) { fetch_object('currentPost').scrollIntoView(true); }">
+
+<!-- content table -->
+
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+
+<!-- logo -->
+<br>
+<a name="top"></a>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+	<td align="left"> <a href="https://forums.alliedmods.net/index.php">
+	<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/am-banner.svg" alt="AlliedModders" id="forum_logo" title="AlliedModders" border="0">
+	</a></td>
+	<td style="padding-right: 10px; padding-top: 10px;" align="right">
+<!-- breadcrumb, login, pm info -->
+<div style="background-color: #EFEFEF; width: 425px; border: 1px solid #000000;" align="center">
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div align="center">
+	<table style="border-top-width:0px" width="425" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr align="left">
+		<td class="vbmenu_control" width="125">
+			
+				<a href="https://forums.alliedmods.net/misc.php?do=showrules">Rules</a>
+			
+		</td>
+		<td class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/faq.php" accesskey="5">FAQ</a></td>
+		<td class="vbmenu_control" width="150"><a href="https://forums.alliedmods.net/memberlist.php">Members List</a></td>
+				
+			
+			<td id="navbar_search" class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/search.php" accesskey="4" rel="nofollow">Search</a> </td>
+			
+		
+	</tr>
+	<tr align="left">
+	
+		
+		
+			<td class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/register.php" rel="nofollow">Register</a></td>
+<td class="vbmenu_control" width="125"><a href="https://forums.alliedmods.net/login.php">Login</a></td>
+
+		
+
+						
+
+		
+		
+	</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+</div>
+
+
+<br>
+
+<div style="background-color: #EFEFEF; width: 425px; border: 1px solid #000000;" align="center">
+  <div align="center">
+    <table style="border-top-width:0px" width="425" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody><tr align="center">
+        <td class="vbmenu_control"><a href="https://sourcemod.net/donate.php"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/btn_donate_SM.gif" border="0"></a></td>
+        <td class="vbmenu_control"><a href="https://sourcemod.net/halloffame.php">Raised This Month: $23</a></td>
+        <td class="vbmenu_control">Target: $400</td>
+      </tr>
+      <tr align="left">
+        <td colspan="3">
+          <div style="border-top: 1px solid;">
+            <div style="background: #069; color: white; font-weight: bold; font-size: 9pt; text-align: right; width: 5%;">
+              &nbsp;5%&nbsp;
+
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+<!-- Sponsor links -->
+<div align="center">
+
+</div>
+<!-- / Sponsor links -->
+
+<br>
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none">
+		<table cellspacing="1" cellpadding="4" border="0">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+					<input type="hidden" name="do" value="process">
+					<input type="hidden" name="quicksearch" value="1">
+					<input type="hidden" name="childforums" value="1">
+					<input type="hidden" name="exactname" value="1">
+					<input type="hidden" name="s" value="">
+	<input type="hidden" name="securitytoken" value="guest">
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001"><input type="submit" class="button" value="Go" tabindex="1004"></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked">Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003">Show Posts</label>
+					</div>					
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+
+	<div class="vbmenu_popup" id="pagenav_menu" style="display: none; position: absolute; z-index: 50;">
+		<table cellspacing="1" cellpadding="4" border="0">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4">
+				<input type="button" class="button" id="pagenav_ibtn" value="Go">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+
+<!-- / PAGENAV POPUP -->
+
+	</td>
+</tr>
+</tbody></table>
+<!-- /logo -->
+
+
+
+
+
+<div style="float: left;">
+<a name="poststop" id="poststop"></a>
+<div style="font-size: 14pt; width: auto;"> <b> <a href="https://forums.alliedmods.net/showthread.php?t=299275">[TF2] Yet Another Dodgeball Plugin v1.3.8 (1/19/2019)</a></b> </div>
+</div>
+<br>
+<br>
+<!-- controls above postbits -->
+<table style="margin-bottom:3px" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr valign="middle">
+	
+		<td class="smallfont" width="185">
+<a href="https://forums.alliedmods.net/newthread.php?do=newthread&amp;f=108" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/newthread.gif" alt="Post New Thread" title="Post New Thread" border="0"></a>
+<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;noquote=1&amp;p=2534328" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/reply.gif" alt="Reply" title="Reply" border="0"></a>
+	
+&nbsp;&nbsp;
+</td><td>
+<!-- BreadCrumbs -->
+<div class="bcrumbs">
+<a href="https://forums.alliedmods.net/index.php" accesskey="1"><strong>AlliedModders Forum Index</strong></a><strong>
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=52">SourceMod</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=123">Plugins</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=108">Plugins</a></span>
+
+</strong> </div>
+<!-- / BreadCrumbs -->
+	</td><td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellspacing="1" cellpadding="3" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 7</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 68"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=2" title="Show results 11 to 20 of 68">2</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=3" title="Show results 21 to 30 of 68">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=2" title="Next Page - Results 11 to 20 of 68">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=7" title="Last Page - Results 61 to 68 of 68">Last <strong>»</strong></a></td>
+	<td class="vbmenu_control" title="" id="pagenav.26" style="cursor: pointer;"> <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0"></td>
+</tr>
+</tbody></table>
+</div></td>
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" style="border-bottom-width:0px" width="100%" cellspacing="1" cellpadding="6" border="0" align="center">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+			<a href="https://forums.alliedmods.net/showthread.php?t=299275&amp;goto=newpost"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/firstnew.svg" alt="View First Unread" title="View First Unread" border="0"></a>
+			<a href="https://forums.alliedmods.net/showthread.php?t=299275&amp;goto=newpost"><strong>View First Unread</strong></a>
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" style="cursor: pointer;" nowrap="nowrap">
+		<a href="https://forums.alliedmods.net/showthread.php?p=2534328&amp;nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script> <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0">
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" style="cursor: pointer;" nowrap="nowrap">
+		<a href="https://forums.alliedmods.net/showthread.php?p=2534328&amp;nojs=1#goto_displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script> <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0">
+	</td>
+	
+	
+	
+	
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+
+
+<div id="posts"><!-- post #2534328 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534328" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534328 -->
+
+
+	<table id="post2534328" class="ttop" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+				<td class="thead" style="font-weight:normal; color: #FFA34F; border-right: 1px solid #FFFFFF;" id="currentPost" align="center">
+		                 	<strong>Author</strong>	
+				</td>
+				<td class="thead" style="font-weight:normal; color: #FFA34F;" align="center">
+			
+<strong></strong>
+
+				</td>
+			
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" rowspan="3" valign="top">
+        
+			
+			<div id="postmenu_2534328">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534328", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+              <!-- SourceMod plugin info box -->
+                <td class="alt3" width="100%">
+                        <table width="100%">
+                           <tbody><tr> <td> <table class="panel" width="100%">
+    <tbody><tr class="alt2">
+        <td width="15%">
+        <div style="font-size: 9pt; font-weight: bold;">Plugin ID:</div>
+        </td>
+        <td width="35%">
+        <div style="font-size: 9pt; font-weight: bold;">5693</div>
+        </td>
+        <td width="15%">
+        <div style="font-size: 9pt; font-weight: bold;">Plugin Version: </div>
+        </td>
+        <td width="35%">
+        <div style="font-size: 9pt; font-weight: bold;">1.3.4</div>
+        </td>
+    </tr>
+    <tr class="alt3">
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Plugin Category: </div> 
+        </td> 
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Gameplay</div>
+        </td>
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Plugin Game: </div> 
+        </td>
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Team Fortress 2</div>
+        </td>
+    </tr>
+    <tr class="alt2">
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Plugin Dependencies: </div>
+        </td>
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;"><ul><li><a href="https://forums.alliedmods.net/showthread.php?t=210221">[TF2] TF2Attributes (v1.2.1, 07/02/2015)</a></li></ul></div>
+        </td>
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Servers with this Plugin: </div>
+        </td>
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">
+<a href="http://www.sourcemod.net/stats.php?mod_id=0&amp;addon_id=3045">20</a>&nbsp;</div>
+        </td>
+<td></td><td></td>
+    </tr>
+    <tr class="alt3">
+        <td>
+        <div style="font-size: 9pt; font-weight: bold;">Plugin Description: </div>
+        </td>
+        <td colspan="3">
+        <div style="font-size: 9pt; font-weight: bold;">A dodgeball mod for Team Fortress 2, Now being handled by someone</div>
+        </td>
+    </tr>
+
+</tbody></table> </td> </tr>
+                        </tbody></table>
+                 </td>
+             </tr>
+             <tr>
+                 <!-- <td class="thead" style="font-weight:normal; color: #FFA34F;" align="center"> <strong>Message</strong> 
+                 </td> -->
+             </tr>
+          <tr>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_2534328">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534328"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534328#post2534328"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-09-2017
+								
+								
+									, 20:12
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 [TF2] Yet Another Dodgeball Plugin v1.3.8 (1/19/2019)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534328" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534328&amp;postcount=1" target="new" rel="nofollow" id="postcount2534328" name="1"><strong>1</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534328" style="width: 100%; display: block;">
+                				<div align="center"><font size="4"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/catface3.png" alt="" title="Cat Face" class="inlineimg" border="0"> [TF2] Dodgeball (1.3.<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/cool.gif" alt="" title="Cool" class="inlineimg" border="0"></font> <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/catface3.png" alt="" title="Cat Face" class="inlineimg" border="0"><br>
+by Damizean, based on Voogru's mod &amp; edited by envynz.<br>
+</div><br>
+<br>
+<b>The heck is this Dodgeball gamemode?</b><br>
+This is Damizeans Dodgeball plugin but picked up by a kid who thought let's make this lively again.<br>
+<br>
+<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>Damizean</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=1262456#post1262456" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">A game mode inspired in the classic 
+Dodgeball. On this mode, all classes except the Pyro are disabled and 
+the respawn is limited to the same rules as the Arena game mode. Each 
+Dodgeball map has a set of spawn points from where rocket projectiles 
+are fired. These projectiles are designed to follow a target player 
+until the player is killed or the rocket has been deflected.<br>
+<br>
+Based on Voogru's original plugin and similar to Asherkin's plugin, I 
+tried to design this one as flexible as possible without having to mess 
+with the plugin's code.<br>
+<br>
+The configuration included with the plugin contains a <b>base rocket</b> setup and a sample <b>nuke</b> rocket type (along with the model and it's 3DS Max source).<br>
+<ul><li>The rocket classes are really customizable</li>
+<li>Each rockets uses an event system, to extend customizability by using custom commands etc.</li>
+<li>You can setup spawnpoints by using there full target name.</li>
+<li>You can toggle being airblasted or not with !ab</li>
+<li>Sick ConVars to make setting up servers easier</li>
+</ul></div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div><b> CVars </b><ul><li><b>tf_dodgeball_enabled</b> - Enables or disables the plugin</li>
+<li><b>tf_dodgeball_enablecfg</b> - Config file to execute when enabling the plugin</li>
+<li><b>tf_dodgeball_disablecfg</b> - Config file to execute when disabling the plugin</li>
+<li><b>tf_dodgeball_speedo</b> - Enable or disable HUD speedometer</li>
+<li><b>tf_dodgeball_announce</b> - Enable or disable the kill announces in chat</li>
+<li><b>tf_dodgeball_announcekill</b> - Enable or disable who killed who in chat</li>
+<li><b>tf_dodgeball_pyrovision</b> - Enable or disable Pyrovision for all players</li>
+<li><b>tf_dodgeball_rbmax</b> - Choose how many times a rocket bounces</li>
+<li><b>tf_dodgeball_airblast</b> - Enable or disable sm_ab &amp; sm_airblast</li>
+<li><b>tf_dodgeball_count_deflect</b> - Enable or disable count of deflects in kill announces</li>
+<li><b>tf_dodgeball_rdrbeep</b> - Enable or disable if redirects beep</li>
+<li><b>tf_dodgeball_block_tauntkill</b> - Enable or disable damage for the Armageddon Taunt (Default 1)</li>
+<li><b>tf_dodgeball_steal_prevention</b> - Enable or disable steal prevention (Default 1)</li>
+<li><b>tf_dodgeball_sp_number</b> - Change number of steals before slay, (Default 3)</li>
+</ul><br>
+NOTE : Upon changing <b>tf_dodgeball_airblast</b> &amp; <b>tf_dodgeball_block_tauntkill</b>, probably pays to restart your server or change map.<br>
+<br>
+<b> Commands </b><ul><li><b>sm_ab</b> - Toggle being airblasted or not</li>
+<li><b>sm_tfdb</b> - Dodgeball Admin Menu</li>
+</ul><br>
+<b> Installation </b><ul><li> Drag the addons folder over the addons folder on your gameserver and merge</li>
+<li> Drag the cfg over into the cfg folder on your gameserver and merge</li>
+<li> If you want the old general.cfg (Referenced later), drag the models
+ and materials folder over the corresponding folders on the gameserver 
+and merge</li>
+<li> Pick a general.cfg from addons/sourcemod/configs/dodgeball and rename it to <b>general.cfg</b> and delete the other one.</li>
+<li>Note : General (old).cfg uses the model from the old plugin, and 
+General (new) uses a new resized airstrike model which players don't 
+have to resize!</li>
+</ul><br>
+<b>To-do list</b><ul><li>Nothing</li>
+</ul><br>
+<b>Requirements</b><ul><li><a href="https://forums.alliedmods.net/showthread.php?t=210221" target="_blank" rel="noopener">TF2Attributes</a></li>
+</ul><br>
+<b>Bugs</b><ul><li>On the new general.cfg with more than 1 rocket, the plugin will sometimes resize the wrong rocket and not the nuke</li>
+</ul><br>
+<b>Changelog</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+<b>7/9/2017</b> <br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+- Added new ConVar <b>tf_dodgeball_announcekill.</b><br>
+- Added ReflexPoisons Autoreflect and speedometer.<br>
+- Added ClassicGuzzi's Observer point.<br>
+- Took over development of the plugin, lulz<br>
+- Removed ReflexPoisions AutoReflect (I didn't do it right)<br>
+- Updated to new syntax (Alot of compilation warnings if anyone wants to fix them, make a pull request on GitHub)<br>
+- Added TF2Attributes as a requirement<br>
+- Added new cvar <b>tf_dodgeball_pyrovision</b><br>
+- Added Asherkins Rocket Bounce Plugin (In new syntax)<br>
+- Added ConVar <b>tf_dodgeball_rbmax</b><br>
+- Added <b>sm_ab</b> &amp; <b>sm_airblast</b><br>
+</div> 
+</div> 
+</div><br>
+<b>7/10/2017</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+- Added new ConVar <b>tf_dodgeball_airblast</b><br>
+- Added new ConVar <b>tf_dodgeball_count_deflect</b><br>
+- Added a ConVar config in cfg/sourcemod (<b>tf2_dodgeball.cfg</b>)<br>
+- Added Beep for when changing clients (Woohoo!)<br>
+- New ConVar <b>tf_dodgeball_rdrbeep</b><br>
+- Fixed some compile warnings<br>
+- Changed model to Air Strike model so you don't have to download anything<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>7/12/2017</b><br>
+- Changed back to Damizeans Nuke model since I couldn't find a resize fix<br>
+<br>
+<b>7/13/2017</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+- Fixed sm_airblast &amp; sm_ab so everyone can use it<br>
+- Updated sm_airblast to sm_ab, also made it so you feel no affect with it enabled.<br>
+- Fixed a problem with the <b>tf_dodgeball_airblast</b> convar, thanks to my terrible coding skills<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>7/15/2017</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+- Added <b>tf_dodgeball_block_tauntkill</b><br>
+- Updated to 1.3, updated with Server Command named <b>tf_dodgeball_resize</b><br>
+- Updated with two general.cfgs.<br>
+- Fixed new general.cfg so it works <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/tongue.gif" alt="" title="Razz" class="inlineimg" border="0"><br>
+- Updated with new HUD<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>7/19/2017</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+- Added pears stealing rocket code<br>
+- Fixed kill announcements<br>
+- Updated github <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/biggrin.gif" alt="" title="Very Happy" class="inlineimg" border="0"><br>
+- Fixed some ConVar stuff I found while adding stuff<br>
+- Removed new HUD<br>
+- Added <b>tf_dodgeball_steal_prevention</b><br>
+- Updated with changes specified by pears<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>7/20/2017</b><br>
+- Added <b>tf_dodgeball_sp_number</b><br>
+<br>
+<b>7/21/2017</b><br>
+- Fixed all compilation warnings! (woohoo!)<br>
+<br>
+<b>7/31/2017</b><br>
+- Added Dr. Doctor's suggestions<br>
+- Updated the configs a bit for better play.<br>
+<br>
+<b>8/26/2017</b><br>
+- Fixed steal number float<br>
+- Updated colors for steal prevention.<br>
+- Added updater support<br>
+<br>
+<b>11/29/2017</b><br>
+- Added flame sound fix<br>
+- Note : update probably doesn't work since I forgot the domain to update the files<br>
+<br>
+<b>11/30/2017</b><br>
+- Changed steal system, now doesn't count a cluster as rockets individually.<br>
+<br>
+<b>1/17/2019</b><br>
+- Fixed issues with pyros having no weapon on spawn.<br>
+- Fixed deflection count and mph showing the wrong values in chat<br>
+- Fixed announcer kills sometimes popping up when it's off.<br>
+<br>
+<b>1/18/2019</b><br>
+- Added TFDB admin menu (/tfdb)<br>
+<br>
+<b>1/19/2019</b><br>
+- Fixed config not loading on certain mapchanges, fixed RocketBounce setting to default on mapchange.<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>Pictures</b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><br>
+<a class="proxied-img-link" href="https://cdn.discordapp.com/attachments/317916043496652802/334072386133426177/picture.jpg" rel="nofollow noopener"><img class="proxied-img" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f61_003.jpg" alt="" border="0"></a><br>
+Thank ClassicGuzzi for this &lt;3<br>
+<br>
+<a class="proxied-img-link" href="https://cdn.discordapp.com/attachments/335290997317697536/335628031471255554/20170715154421_1.jpg" rel="nofollow noopener"><img class="proxied-img" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f61_002.jpg" alt="" border="0"></a><br>
+So this is what happens when you type /tf_dodgeball_resize on a normal rocket<br>
+<br>
+<a class="proxied-img-link" href="https://cdn.discordapp.com/attachments/335290997317697536/335628296580497408/20170712105848_1.jpg" rel="nofollow noopener"><img class="proxied-img" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f617474.jpg" alt="" border="0"></a><br>
+New Nuke model (Doesn't require clients to download)<br>
+</div> 
+</div> 
+</div><br>
+<br>
+<b>Downloads</b><br>
+The downloads are now back on GitHub!<br>
+Check them out there.<br>
+<a href="https://github.com/blood-git/TF2-Dodgeball" target="_blank" rel="nofollow noopener">https://github.com/blood-git/TF2-Dodgeball</a><br>
+<br>
+<b>Credits</b><ul><li>Damizean - Original Plugin</li>
+<li>ReflexPoison - Speedometer &amp; Announce mph on death</li>
+<li>ClassicGuzzi - Obeserver Point</li>
+<li>BloodyNightmare &amp; Mitchell - For original version of AirblastPrevention</li>
+<li>Powerlord - Original Pyrovision for all plugin</li>
+</ul><br>
+<font size="5">NOTE : The original plugin can be found <a href="https://forums.alliedmods.net/showthread.php?t=134503" target="_blank" rel="noopener">here.</a></font>
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by envynz; 01-18-2019 at <span class="time">19:16</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534328 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534328_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534328 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534328 --><!-- post #2534331 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534331" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534331 -->
+
+
+
+	<table id="post2534331" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534331">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534331", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_2534331">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534331"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534331#post2534331"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-09-2017
+								
+								
+									, 20:30
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534331" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534331&amp;postcount=2" target="new" rel="nofollow" id="postcount2534331" name="2"><strong>2</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534331" style="width: 100%; display: block;">
+                				<b>Reserved <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/biggrin.gif" alt="" title="Very Happy" class="inlineimg" border="0"></b>
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by envynz; 07-09-2017 at <span class="time">21:00</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534331 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534331_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534331 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534331 --><!-- post #2534334 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534334" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534334 -->
+
+
+
+	<table id="post2534334" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534334">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=84304">FlaminSarge</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534334", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Veteran Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=84304">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar84304_2.gif" alt="FlaminSarge's Avatar" title="FlaminSarge's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jul 2010</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 3,070 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_2534334">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534334"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534334#post2534334"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-09-2017
+								
+								
+									, 20:33
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534334" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534334&amp;postcount=3" target="new" rel="nofollow" id="postcount2534334" name="3"><strong>3</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534334" style="width: 100%; display: block;">
+                				Instead of using a separate nuke model, how about 
+using one of the regular rockets (or air strike rockets) and setting 
+m_flModelScale on it? Then clients don't need to download anything 
+extra.<br>
+<br>
+With regards to GitHub, you might wanna put up the source for 
+AirblastPrevention; in fact, you should probs attach the SMX's through a
+ GitHub release and leave the repo just for the source files/configs. 
+Definitely avoid putting the nuke model in the repo files.<br>
+You can add non-pushability for airblast through TF2Attributes if you 
+really need it (either via airblast vulnerability, or via the push flags
+ on the flamethrowers themselves; attribs 254, 255, 329, etc).<br>
+<br>
+Nice work.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<strike>Bread EOTL GunMettle Invasion</strike> Jungle Inferno will break everything. Don't even ask.<br>
+<br>
+<a href="http://www.sourcemod.net/plugins.php?cat=0&amp;mod=-1&amp;title=&amp;author=FlaminSarge&amp;description=&amp;search=1" target="_blank" rel="nofollow noopener">All plugins</a>: Randomizer/GiveWeapon, ModelManager, etc.<br>
+Post in plugin threads with questions.<br>
+<a href="http://steamcommunity.com/id/flaminsarge" target="_blank" rel="nofollow noopener">Steam</a> is for playing games.<br>
+You <b>will </b>be fed to javalia otherwise.<br>
+<a href="https://i.imgur.com/GmkxKSm.png" target="_blank" rel="nofollow noopener">Psyduck likes replays.</a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by FlaminSarge; 07-09-2017 at <span class="time">20:56</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="FlaminSarge is offline" title="FlaminSarge is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534334 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534334_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">FlaminSarge</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=84304">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=84304" rel="nofollow">Send a private message to FlaminSarge</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=84304" rel="nofollow">Find More Posts by FlaminSarge</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534334 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534334 --><!-- post #2534336 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534336" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534336 -->
+
+
+
+	<table id="post2534336" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534336">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534336", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_2534336">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534336"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534336#post2534336"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-09-2017
+								
+								
+									, 20:37
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534336" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534336&amp;postcount=4" target="new" rel="nofollow" id="postcount2534336" name="4"><strong>4</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534336" style="width: 100%; display: block;">
+                				<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>FlaminSarge</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=2534334#post2534334" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">Edited msg with various other things<br>
+<br>
+Also I can delete/move my post if you want to reserve the second post for future text.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>That'd be great cheers<br>
+<br>
+<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>FlaminSarge</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=2534330#post2534330" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">Instead of using a separate nuke 
+model, how about using one of the regular rockets (or air strike 
+rockets) and setting m_flModelScale on it? Then clients don't need to 
+download anything extra.<br>
+<br>
+With regards to GitHub, you might wanna put up the source for 
+AirblastPrevention; in fact, you should probs attach the SMX's through a
+ GitHub release and leave the repo just for the source files/configs. 
+Definitely avoid putting the nuke model in the repo files.<br>
+You can add non-pushability for airblast through TF2Attributes if you 
+really need it (either via airblast vulnerability, or via the push flags
+ on the flamethrowers themselves; attribs 254, 255, 329, etc).<br>
+<br>
+Nice work.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>^^^^ put there for my memory
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by envynz; 07-09-2017 at <span class="time">21:00</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534336 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534336_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534336 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534336 --><!-- post #2534340 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534340" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534340 -->
+
+
+
+	<table id="post2534340" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534340">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=84304">FlaminSarge</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534340", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Veteran Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=84304">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar84304_2.gif" alt="FlaminSarge's Avatar" title="FlaminSarge's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jul 2010</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 3,070 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_2534340">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534340"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534340#post2534340"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-09-2017
+								
+								
+									, 21:00
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534340" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534340&amp;postcount=5" target="new" rel="nofollow" id="postcount2534340" name="5"><strong>5</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534340" style="width: 100%; display: block;">
+                				Would also recommend lowercasing the plugin/source 
+filenames just as a convention; case-insensitivity on various OS's can 
+end up being a pain (though usually only for model/material paths and 
+not plugins, but better to be consistent, I guess).
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<strike>Bread EOTL GunMettle Invasion</strike> Jungle Inferno will break everything. Don't even ask.<br>
+<br>
+<a href="http://www.sourcemod.net/plugins.php?cat=0&amp;mod=-1&amp;title=&amp;author=FlaminSarge&amp;description=&amp;search=1" target="_blank" rel="nofollow noopener">All plugins</a>: Randomizer/GiveWeapon, ModelManager, etc.<br>
+Post in plugin threads with questions.<br>
+<a href="http://steamcommunity.com/id/flaminsarge" target="_blank" rel="nofollow noopener">Steam</a> is for playing games.<br>
+You <b>will </b>be fed to javalia otherwise.<br>
+<a href="https://i.imgur.com/GmkxKSm.png" target="_blank" rel="nofollow noopener">Psyduck likes replays.</a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="FlaminSarge is offline" title="FlaminSarge is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534340 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534340_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">FlaminSarge</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=84304">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=84304" rel="nofollow">Send a private message to FlaminSarge</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=84304" rel="nofollow">Find More Posts by FlaminSarge</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534340 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534340 --><!-- post #2534375 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534375" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534375 -->
+
+
+
+	<table id="post2534375" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534375">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534375", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_2534375">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534375"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534375#post2534375"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-10-2017
+								
+								
+									, 00:58
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534375" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534375&amp;postcount=6" target="new" rel="nofollow" id="postcount2534375" name="6"><strong>6</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534375" style="width: 100%; display: block;">
+                				No matter what I do, trying to resize the rocket model automatticly just won't work.<br>
+<br>
+I created a server command, tf_dodgeball_resize, put it under nuke in  general.cfg<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">PHP Code:</div>
+	<div class="alt2" dir="ltr" style="margin: 0px; padding: 6px; border: 1px inset; width: auto; height: 114px; text-align: left; overflow: auto">
+		<code style="white-space:nowrap">
+			<!-- php buffer start --><code><span style="color: #000000">
+<span style="color: #0000BB">void&nbsp;RegisterCommands</span><span style="color: #007700">()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">RegServerCmd</span><span style="color: #007700">(</span><span style="color: #DD0000">"tf_dodgeball_explosion"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">CmdExplosion</span><span style="color: #007700">);<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">RegServerCmd</span><span style="color: #007700">(</span><span style="color: #DD0000">"tf_dodgeball_shockwave"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">CmdShockwave</span><span style="color: #007700">);<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">RegServerCmd</span><span style="color: #007700">(</span><span style="color: #DD0000">"tf_dodgeball_resize"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">CmdResize</span><span style="color: #007700">);<br>}&nbsp;
+<br></span><span style="color: #0000BB"></span>
+</span>
+</code><!-- php buffer end -->
+		</code>
+	</div>
+</div><div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">PHP Code:</div>
+	<div class="alt2" dir="ltr" style="margin: 0px; padding: 6px; border: 1px inset; width: auto; height: 162px; text-align: left; overflow: auto">
+		<code style="white-space:nowrap">
+			<!-- php buffer start --><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;</span><span style="color: #0000BB">Action&nbsp;CmdResize</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;iIndex</span><span style="color: #007700">)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;iEntity&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">EntRefToEntIndex</span><span style="color: #007700">(</span><span style="color: #0000BB">g_iRocketEntity</span><span style="color: #007700">[</span><span style="color: #0000BB">iIndex</span><span style="color: #007700">]);<br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">iEntity&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">IsValidEntity</span><span style="color: #007700">(</span><span style="color: #0000BB">iEntity</span><span style="color: #007700">))<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">SetEntPropFloat</span><span style="color: #007700">(</span><span style="color: #0000BB">iEntity</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Prop_Send</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"m_flModelScale"</span><span style="color: #007700">,&nbsp;(</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0</span><span style="color: #007700">));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">SetEntPropFloat</span><span style="color: #007700">(</span><span style="color: #0000BB">iEntity</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Prop_Send</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"m_flModelScale"</span><span style="color: #007700">,&nbsp;(</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0</span><span style="color: #007700">));<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}&nbsp;
+<br></span><span style="color: #0000BB"></span>
+</span>
+</code><!-- php buffer end -->
+		</code>
+	</div>
+</div>However, when I put it through server console, it will resize! (no matter if its a nuke or what)<br>
+<br>
+oh well, I'll work on a fix today so this plugin becomes way better than the old one <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/biggrin.gif" alt="" title="Very Happy" class="inlineimg" border="0">
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by envynz; 07-10-2017 at <span class="time">17:18</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534375 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534375_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534375 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534375 --><!-- post #2534569 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534569" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534569 -->
+
+
+
+	<table id="post2534569" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534569">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534569", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_2534569">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534569"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534569#post2534569"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-11-2017
+								
+								
+									, 04:30
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534569" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534569&amp;postcount=7" target="new" rel="nofollow" id="postcount2534569" name="7"><strong>7</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534569" style="width: 100%; display: block;">
+                				<b> Comment features I should add <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/smile.gif" alt="" title="Smile" class="inlineimg" border="0"></b>
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534569 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534569_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534569 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534569 --><!-- post #2534792 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534792" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534792 -->
+
+
+
+	<table id="post2534792" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534792">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534792", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_2534792">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534792"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534792#post2534792"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-12-2017
+								
+								
+									, 05:13
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534792" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534792&amp;postcount=8" target="new" rel="nofollow" id="postcount2534792" name="8"><strong>8</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534792" style="width: 100%; display: block;">
+                				<b> Changed general.cfg back to default found in old plugin <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/biggrin.gif" alt="" title="Very Happy" class="inlineimg" border="0"></b>
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534792 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534792_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534792 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534792 --><!-- post #2534892 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534892" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #2534892 -->
+
+
+
+	<table id="post2534892" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534892">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=279454">QuantumToast</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534892", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: May 2017</div>
+
+
+
+				<div>Location: US</div>
+				
+				
+				<div>
+				<!--Posts: 35 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_2534892">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534892"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534892#post2534892"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-12-2017
+								
+								
+									, 14:28
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534892" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534892&amp;postcount=9" target="new" rel="nofollow" id="postcount2534892" name="9"><strong>9</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534892" style="width: 100%; display: block;">
+                				Not sure if this is in the plugin already (haven't 
+tested it), but does this plugin allow rockets to speed up over time 
+even without being reflected? I've been using <a href="https://forums.alliedmods.net/showthread.php?t=251870" target="_blank" rel="noopener">ClassicGuzzi's Dodgeball Redux</a> plugin and that's the one feature it's lacking that I'd like.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a href="http://www.gametracker.com/server_info/74.91.113.247:27015/" target="_blank" rel="nofollow noopener"><img class="proxied-img" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/687474703a2f2f63616368652e67616d65747261636b65722e636f6d2f73.png" alt="" border="0"></a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="QuantumToast is offline" title="QuantumToast is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534892 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534892_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">QuantumToast</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=279454">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=279454" rel="nofollow">Send a private message to QuantumToast</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=279454" rel="nofollow">Find More Posts by QuantumToast</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534892 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534892 --><!-- post #2534931 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit2534931" style="padding:0px 0px 0px 0px">
+	
+
+
+
+<!-- post #2534931 -->
+
+	<table id="post2534931" class="tbottom" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_2534931">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=255220">envynz</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_2534931", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					AlliedModders Donor
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=255220">
+					
+						<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/avatar255220_17.gif" alt="envynz's Avatar" title="envynz's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2014</div>
+
+
+
+				<div>Location: NZ</div>
+				
+				
+				<div>
+				<!--Posts: 187 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_2534931">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post2534931"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=2534931#post2534931"> <img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								07-12-2017
+								
+								
+									, 17:17
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [TF2] Yet Another Dodgeball Plugin (Reborn)
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+							<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;p=2534931" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/quote.gif" alt="Reply With Quote" title="Reply With Quote" border="0"></a>
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=2534931&amp;postcount=10" target="new" rel="nofollow" id="postcount2534931" name="10"><strong>10</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_2534931" style="width: 100%; display: block;">
+                				<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>QuantumToast</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=2534892#post2534892" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">Not sure if this is in the plugin 
+already (haven't tested it), but does this plugin allow rockets to speed
+ up over time even without being reflected? I've been using <a href="https://forums.alliedmods.net/showthread.php?t=251870" target="_blank" rel="noopener">ClassicGuzzi's Dodgeball Redux</a> plugin and that's the one feature it's lacking that I'd like.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>Repeat timer on gameframe could work, but I don't think it's in 
+this plugin or the old one, but it doesn't really sound like a good idea
+ because the rocket system is not the same as dodgeball redux.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/user_offline.svg" alt="envynz is offline" title="envynz is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 2534931 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2534931_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">envynz</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=255220">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=255220" rel="nofollow">Send a private message to envynz</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://github.com/BloodTigerNZ/TRT-Project" rel="nofollow noopener" target="_blank">Visit envynz's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=255220" rel="nofollow">Find More Posts by envynz</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 2534931 popup menu -->
+
+
+
+    </div>
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2534931 --><div id="lastpost"></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+<!-- / start content table -->
+<!-- controls below postbits -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr valign="top">
+	
+		<td class="smallfont" style="padding-top: 4px; width: 90px;"><a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;noquote=1&amp;p=2534931" rel="nofollow"><img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/reply.gif" alt="Reply" title="Reply" border="0"></a> 
+</td><td style="padding-top: 10px;" align="left">
+<!-- BreadCrumbs -->
+<div class="bcrumbs">
+<a href="https://forums.alliedmods.net/index.php" accesskey="1"><strong>AlliedModders Forum Index</strong></a><strong>
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=52">SourceMod</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=123">Plugins</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=108">Plugins</a></span>
+
+</strong> </div>
+<!-- / BreadCrumbs -->
+
+ </td>
+		
+	
+		<td style="border-width: 1px;" align="right"><div class="pagenav" align="right">
+<table class="tborder" cellspacing="1" cellpadding="3" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 7</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 68"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=2" title="Show results 11 to 20 of 68">2</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=3" title="Show results 21 to 30 of 68">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=2" title="Next Page - Results 11 to 20 of 68">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=299275&amp;page=7" title="Last Page - Results 61 to 68 of 68">Last <strong>»</strong></a></td>
+	<td class="vbmenu_control" title="" id="pagenav.209" style="cursor: pointer;"> <img src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0"></td>
+</tr>
+</tbody></table>
+</div>
+						
+		</td>
+	
+</tr>
+</tbody></table>
+
+<!-- / controls below postbits -->
+
+
+
+
+<br>
+
+<div class="smallfont" align="center">
+	<strong>«</strong>
+		<a href="https://forums.alliedmods.net/showthread.php?t=299275&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+		|
+		<a href="https://forums.alliedmods.net/showthread.php?t=299275&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>»</strong>
+</div>
+
+
+<br>
+
+
+
+
+
+
+
+
+<!-- currently active users -->
+
+<!-- end currently active users -->
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=299275&amp;pollid=" method="post" name="threadadminform">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/printer.gif" alt="Show Printable Version" title="Show Printable Version"> <a href="https://forums.alliedmods.net/printthread.php?t=299275" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/sendtofriend.gif" alt="Email this Page" title="Email this Page"> <a href="https://forums.alliedmods.net/sendmessage.php?do=sendtofriend&amp;t=299275" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- Plugin Approve / Unapprove Form -->
+<form name="plugin_a_u" method="post" action="showthread.php?t=299275">
+<input type="hidden" name="userid" value="">
+<input type="hidden" name="postid" value="">
+<input type="hidden" name="threadid" value="">
+<input type="hidden" name="pdo" value="">
+<input type="hidden" name="s" value="">
+<input type="hidden" name="securitytoken" value="guest">
+</form>
+<!-- / Plugin Approve / Unnaprove Form -->
+
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/mode_linear.gif" alt="Linear Mode" title="Linear Mode"> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/mode_hybrid.gif" alt="Hybrid Mode" title="Hybrid Mode"> <a href="https://forums.alliedmods.net/showthread.php?mode=hybrid&amp;t=299275">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/mode_threaded.gif" alt="Threaded Mode" title="Threaded Mode"> <a href="https://forums.alliedmods.net/showthread.php?p=2534328&amp;mode=threaded#post2534328">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" width="210" cellspacing="1" cellpadding="6" border="0">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="[TF2]%20Yet%20Another%20Dodgeball%20Plugin%20v1.3.8%20(1_19_2019)%20-%20AlliedModders_fichiers/collapse_thead.svg" alt="" border="0"></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr>
+		
+		<div><a href="https://forums.alliedmods.net/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+		<hr>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellspacing="0" cellpadding="0" border="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="">
+	<input type="hidden" name="daysprune" value="">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="129" class="fjdpth0"> Server Discussion</option>
+<option value="130" class="fjdpth1">&nbsp; &nbsp;  Source Servers (SRCDS)</option>
+<option value="131" class="fjdpth1">&nbsp; &nbsp;  HL1 Servers (HLDS)</option>
+<option value="3" class="fjdpth0"> AMX Mod X</option>
+<option value="16" class="fjdpth1">&nbsp; &nbsp;  News</option>
+<option value="105" class="fjdpth1">&nbsp; &nbsp;  Bug Reports</option>
+<option value="7" class="fjdpth1">&nbsp; &nbsp;  General</option>
+<option value="161" class="fjdpth1">&nbsp; &nbsp;  Off-Topic</option>
+<option value="79" class="fjdpth1">&nbsp; &nbsp;  Plugins</option>
+<option value="12" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Suggestions / Requests</option>
+<option value="8" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Approved Plugins</option>
+<option value="26" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  New Plugin Submissions</option>
+<option value="27" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Unapproved/Old Plugins</option>
+<option value="25" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Translation Request</option>
+<option value="85" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  High-Traffic Plugins</option>
+<option value="104" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  GunGame</option>
+<option value="95" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  UAIO (Ultimate All-In-One Plugin)</option>
+<option value="128" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  xREDIRECT</option>
+<option value="88" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CSDM</option>
+<option value="111" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  AMX Super</option>
+<option value="113" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  RuneMod</option>
+<option value="126" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Zombie Plague Mod</option>
+<option value="30" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SuperHero Mod</option>
+<option value="41" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  News</option>
+<option value="36" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Tech Support</option>
+<option value="43" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Scripting Help</option>
+<option value="38" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Off-Topic / General Chat</option>
+<option value="84" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Heroes</option>
+<option value="44" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Suggestions / Requests</option>
+<option value="51" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Approved Heroes</option>
+<option value="35" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  New Submissions</option>
+<option value="91" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Unapproved/Old Heroes</option>
+<option value="100" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Module Heroes</option>
+<option value="50" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SuperHero Mod Stats - By 123</option>
+<option value="48" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (OLD) Bug Reports</option>
+<option value="78" class="fjdpth1">&nbsp; &nbsp;  Scripting</option>
+<option value="11" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Scripting Help</option>
+<option value="83" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Code Snippets/Tutorials</option>
+<option value="9" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Module Coding</option>
+<option value="160" class="fjdpth1">&nbsp; &nbsp;  Donor Access</option>
+<option value="52" class="fjdpth0"> SourceMod</option>
+<option value="59" class="fjdpth1">&nbsp; &nbsp;  News</option>
+<option value="58" class="fjdpth1">&nbsp; &nbsp;  General</option>
+<option value="123" class="fjdpth1">&nbsp; &nbsp;  Plugins</option>
+<option value="108" class="fjsel" selected="selected">&nbsp; &nbsp; &nbsp; &nbsp;  Plugins</option>
+<option value="109" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Unapproved Plugins</option>
+<option value="60" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Plugin/Gameplay Ideas and Requests</option>
+<option value="153" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  High-Traffic Plugins</option>
+<option value="133" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SourceMod Anti-Cheat</option>
+<option value="132" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Zombie:Reloaded</option>
+<option value="152" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SourceBans</option>
+<option value="154" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  VSH / Freak Fortress</option>
+<option value="157" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Store</option>
+<option value="155" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SM_Hosties</option>
+<option value="156" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  HLstatsX:CE</option>
+<option value="107" class="fjdpth1">&nbsp; &nbsp;  Scripting</option>
+<option value="134" class="fjdpth1">&nbsp; &nbsp;  Extensions</option>
+<option value="112" class="fjdpth1">&nbsp; &nbsp;  Snippets and Tutorials</option>
+<option value="125" class="fjdpth1">&nbsp; &nbsp;  Donor Access</option>
+<option value="56" class="fjdpth1">&nbsp; &nbsp;  Metamod: Source</option>
+<option value="76" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Metamod:Source Plugins</option>
+<option value="74" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Metamod:Source Questions</option>
+<option value="75" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coding MM:S Plugins &amp; SM Extensions</option>
+<option value="55" class="fjdpth0"> Hosted Stuff</option>
+<option value="144" class="fjdpth1">&nbsp; &nbsp;  Asherkin's Plugins</option>
+<option value="146" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  TF2Items</option>
+<option value="145" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  TFDodgeball</option>
+<option value="147" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  SteamTools</option>
+<option value="82" class="fjdpth1">&nbsp; &nbsp;  Bail's Plugins</option>
+<option value="87" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  CSDM</option>
+<option value="77" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  CS:S DM</option>
+<option value="162" class="fjdpth0"> Off-Topic &amp; Trash</option>
+<option value="15" class="fjdpth1">&nbsp; &nbsp;  Off-Topic</option>
+<option value="22" class="fjdpth1">&nbsp; &nbsp;  Trash</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go">
+	</form>
+</div>
+			</td>
+		</tr>		
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+<br>
+<div class="smallfont" align="center">All times are GMT -4. The time now is <span class="time">04:17</span>.</div>
+<br>
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<form action="index.php" method="get">
+	
+<table class="page" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+<tbody><tr>
+	
+	
+	<td class="tfoot" width="100%" align="right">
+		<div class="smallfont">
+			<strong>
+				
+				<a href="https://alliedmods.net/dmca">DMCA</a> -
+				
+				
+				<a href="https://forums.alliedmods.net/archive/index.php">Archive</a> -
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+<br>
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin®<br>Copyright ©2000 - 2019, vBulletin Solutions, Inc.<br>
+	<!-- Do not remove this copyright notice -->
+	Theme made by Freecode
+	</div>
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	
+	</div>
+</div>
+
+</form>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+
+</script>
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+
+</body></html>

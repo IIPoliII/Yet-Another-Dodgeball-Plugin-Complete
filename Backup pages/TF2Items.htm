@@ -1,0 +1,3684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en"><head>
+	<meta http-equiv="x-ua-compatible" content="IE=9">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="generator" content="vBulletin">
+
+<meta name="keywords" content="TF2Items - Items with custom attributes., AMX Mod X,AMX Mod,Metamod,Half-Life Plugins,AMXX,AMX,Plugins,Counter-Strike,CSDM,Deathmatch,Servers,C++">
+<meta name="description" content="TF2Items - Items with custom attributes. TF2Items">
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.7 CSS
+* Style: 'phpBB'; Style ID: 5
+*/
+body
+{
+	background: #E5E5E5;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 10px;
+	padding: 0px;
+}
+a:link, body_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #006699;
+}
+a:hover, a:active, body_ahover
+{
+	color: #DD6900;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 2px solid #006699;
+	
+}
+.tcat
+{
+	background: #C7D0D7 url(images/gradients/gradient_tcat.gif) repeat-x top left;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #006699;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #C7D0D7 url(images/gradients/gradient_thead.gif) repeat-x top left;
+	color: #FFFFFF;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #EDE1DC;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #EDE1DC;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #EDE1DC;
+	text-decoration: underline;
+}
+.tfoot
+{
+	background: #C7D0D7;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #006699;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #006699;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #006699;
+}
+.alt1, .alt1Active
+{
+	background: #EFEFEF;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #EFEFEF;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #D8D8D8;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #FFFFFF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #EFEFEF url(images/gradients/gradient_panel.gif) repeat-x top left;
+	color: #000000;
+	padding: 10px;
+	border: 1px solid #b2b2b2;
+}
+.panelsurround
+{
+	background: #FFFFFF url(images/gradients/gradient_panelsurround.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #EFEFEF;
+	color: #006699;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #006699;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #BBC7CE;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #006699;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 10pt; font-weight: bold; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+.code 
+{
+ background-color: #DDDDDD;
+ color: #000000;
+}
+.main-page
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-left: 1px solid #98AAB1;
+  border-right: 1px solid #98AAB1;
+}
+
+.spacer-page
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  width: auto;
+  display: block;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+}
+
+.spacer-page-top
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  width: auto;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+  border-top: 1px solid #98AAB1;
+}
+
+.spacer-page-bottom
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-right: 1px solid #98AAB1;
+  border-left: 1px solid #98AAB1;
+  border-bottom: 1px solid #98AAB1;
+}
+
+.bpost { background-color: #D1D7DC; border: 1px solid #FFFFFF; padding: 3px; }
+
+.ttop 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+  border-top: 2px solid #006699;
+}
+.tbottom 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+  border-bottom: 2px solid #006699;
+}
+.tinside 
+{ 
+  border-left: 2px solid #006699;
+  border-right: 2px solid #006699;
+}
+
+.smalltext
+{
+  font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+  font-size: 11px;
+  height: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.bcrumbs
+{
+  font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+  font-size: 11px;
+  height: 12px;
+  padding: 0px;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+.bcrumbs a
+{
+  text-decoration: none;
+}
+.approve
+{
+  background: url(images/buttons/approve.gif) no-repeat;
+  padding: 0px;
+  margin: 0px;
+  width: 75px;
+  height: 18px;
+  border: 0px;
+  cursor: pointer;
+  float: left;
+}
+.unapprove
+{
+  background: url(images/buttons/unapprove.gif) no-repeat;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 2px;
+  width: 75px;
+  height: 18px;
+  border: 0px;
+  cursor: pointer;
+  float: right;
+}
+
+.home-links
+{
+  font-size: 10px;
+  text-decoration: none;
+  padding-right: 2px;
+}
+
+.home-links a
+{
+  font-size: 10px;
+  text-decoration: none;
+  padding-right: 2px;
+}
+
+
+.quote
+{
+  background-color: #FFF;
+  color: #000;
+}
+
+.alt3
+{
+  background-color: #DEE3E7;
+  color: #000;
+}
+.alt4
+{
+  background-color: #D1D7DC;
+  color: #000;
+}
+td, th, p, li, .smallfont { line-height: 1.2; }
+
+img.proxied-img { max-width: 100%; max-height: 400px; }
+</style>
+<link rel="stylesheet" type="text/css" href="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/vbulletin_important.css">
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/connection-min.js"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/vbulletin_global.js"></script>
+<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/vbulletin_menu.js"></script>
+<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/am_plugin_sys.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="AlliedModders RSS Feed" href="https://forums.alliedmods.net/external.php?type=RSS2">
+
+<link rel="alternate" type="application/rss+xml" title="AlliedModders - TF2Items - RSS Feed" href="https://forums.alliedmods.net/external.php?type=RSS2&amp;forumids=146">
+
+
+	<title> TF2Items - Items with custom attributes. - AlliedModders</title>
+	<script type="text/javascript" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/vbulletin_post_loader.js"></script>
+</head>
+<body onload="if (document.body.scrollIntoView &amp;&amp; (window.location.href.indexOf('#') == -1 || window.location.href.indexOf('#post') > -1)) { fetch_object('currentPost').scrollIntoView(true); }">
+
+<!-- content table -->
+
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+
+<!-- logo -->
+<br>
+<a name="top"></a>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+	<td align="left"> <a href="https://forums.alliedmods.net/index.php">
+	<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/am-banner.svg" alt="AlliedModders" id="forum_logo" title="AlliedModders" border="0">
+	</a></td>
+	<td style="padding-right: 10px; padding-top: 10px;" align="right">
+<!-- breadcrumb, login, pm info -->
+<div style="background-color: #EFEFEF; width: 425px; border: 1px solid #000000;" align="center">
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div align="center">
+	<table style="border-top-width:0px" width="425" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr align="left">
+		<td class="vbmenu_control" width="125">
+			
+				<a href="https://forums.alliedmods.net/misc.php?do=showrules">Rules</a>
+			
+		</td>
+		<td class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/faq.php" accesskey="5">FAQ</a></td>
+		<td class="vbmenu_control" width="150"><a href="https://forums.alliedmods.net/memberlist.php">Members List</a></td>
+				
+			
+			<td id="navbar_search" class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/search.php" accesskey="4" rel="nofollow">Search</a> </td>
+			
+		
+	</tr>
+	<tr align="left">
+	
+		
+		
+			<td class="vbmenu_control" width="75"><a href="https://forums.alliedmods.net/register.php" rel="nofollow">Register</a></td>
+<td class="vbmenu_control" width="125"><a href="https://forums.alliedmods.net/login.php">Login</a></td>
+
+		
+
+						
+
+		
+		
+	</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+</div>
+
+
+<br>
+
+<div style="background-color: #EFEFEF; width: 425px; border: 1px solid #000000;" align="center">
+  <div align="center">
+    <table style="border-top-width:0px" width="425" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody><tr align="center">
+        <td class="vbmenu_control"><a href="https://sourcemod.net/donate.php"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/btn_donate_SM.gif" border="0"></a></td>
+        <td class="vbmenu_control"><a href="https://sourcemod.net/halloffame.php">Raised This Month: $23</a></td>
+        <td class="vbmenu_control">Target: $400</td>
+      </tr>
+      <tr align="left">
+        <td colspan="3">
+          <div style="border-top: 1px solid;">
+            <div style="background: #069; color: white; font-weight: bold; font-size: 9pt; text-align: right; width: 5%;">
+              &nbsp;5%&nbsp;
+
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+<!-- Sponsor links -->
+<div align="center">
+
+</div>
+<!-- / Sponsor links -->
+
+<br>
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none">
+		<table cellspacing="1" cellpadding="4" border="0">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+					<input type="hidden" name="do" value="process">
+					<input type="hidden" name="quicksearch" value="1">
+					<input type="hidden" name="childforums" value="1">
+					<input type="hidden" name="exactname" value="1">
+					<input type="hidden" name="s" value="">
+	<input type="hidden" name="securitytoken" value="guest">
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001"><input type="submit" class="button" value="Go" tabindex="1004"></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked">Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003">Show Posts</label>
+					</div>					
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+
+	<div class="vbmenu_popup" id="pagenav_menu" style="display: none; position: absolute; z-index: 50;">
+		<table cellspacing="1" cellpadding="4" border="0">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4">
+				<input type="button" class="button" id="pagenav_ibtn" value="Go">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+
+<!-- / PAGENAV POPUP -->
+
+	</td>
+</tr>
+</tbody></table>
+<!-- /logo -->
+
+
+
+
+
+<div style="float: left;">
+<a name="poststop" id="poststop"></a>
+<div style="font-size: 14pt; width: auto;"> <b> <a href="https://forums.alliedmods.net/showthread.php?t=115100">TF2Items - Items with custom attributes.</a></b> </div>
+</div>
+<br>
+<br>
+<!-- controls above postbits -->
+<table style="margin-bottom:3px" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr valign="middle">
+	
+		<td class="smallfont" width="185">
+<a href="https://forums.alliedmods.net/newthread.php?do=newthread&amp;f=146" rel="nofollow"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/newthread.gif" alt="Post New Thread" title="Post New Thread" border="0"></a>
+<a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;noquote=1&amp;p=1050170" rel="nofollow"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/threadclosed.gif" alt="Closed Thread" title="Closed Thread" border="0"></a>
+	
+&nbsp;&nbsp;
+</td><td>
+<!-- BreadCrumbs -->
+<div class="bcrumbs">
+<a href="https://forums.alliedmods.net/index.php" accesskey="1"><strong>AlliedModders Forum Index</strong></a><strong>
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=55">Hosted Stuff</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=144">Asherkin's Plugins</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=146">TF2Items</a></span>
+
+</strong> </div>
+<!-- / BreadCrumbs -->
+	</td><td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellspacing="1" cellpadding="3" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 153</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 1,525"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=2" title="Show results 11 to 20 of 1,525">2</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=3" title="Show results 21 to 30 of 1,525">3</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=11" title="Show results 101 to 110 of 1,525"><!--+10-->11</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=51" title="Show results 501 to 510 of 1,525"><!--+50-->51</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=101" title="Show results 1,001 to 1,010 of 1,525"><!--+100-->101</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=2" title="Next Page - Results 11 to 20 of 1,525">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=153" title="Last Page - Results 1,521 to 1,525 of 1,525">Last <strong>»</strong></a></td>
+	<td class="vbmenu_control" title="" id="pagenav.29" style="cursor: pointer;"> <img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0"></td>
+</tr>
+</tbody></table>
+</div></td>
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" style="border-bottom-width:0px" width="100%" cellspacing="1" cellpadding="6" border="0" align="center">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" style="cursor: pointer;" nowrap="nowrap">
+		<a href="https://forums.alliedmods.net/showthread.php?p=1050170&amp;nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script> <img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0">
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" style="cursor: pointer;" nowrap="nowrap">
+		<a href="https://forums.alliedmods.net/showthread.php?p=1050170&amp;nojs=1#goto_displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script> <img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0">
+	</td>
+	
+	
+	
+	
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+
+
+<div id="posts"><!-- post #1050170 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050170" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050170 -->
+
+
+	<table id="post1050170" class="ttop" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+				<td class="thead" style="font-weight:normal; color: #FFA34F; border-right: 1px solid #FFFFFF;" id="currentPost" align="center">
+		                 	<strong>Author</strong>	
+				</td>
+				<td class="thead" style="font-weight:normal; color: #FFA34F;" align="center">
+			
+<strong>Message</strong>
+
+				</td>
+			
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050170">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=59029">asherkin</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050170", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					SourceMod Developer
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=59029">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/a.png" alt="asherkin's Avatar" title="asherkin's Avatar" width="100" height="100" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Aug 2009</div>
+
+
+
+				<div>Location: OnGameFrame()</div>
+				
+				
+				<div>
+				<!--Posts: 7,255 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_1050170">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050170"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050170#post1050170"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 07:15
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 TF2Items - Items with custom attributes.
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050170&amp;postcount=1" target="new" rel="nofollow" id="postcount1050170" name="1"><strong>1</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050170" style="width: 100%; display: block;">
+                				This extension allows the attributes, level and 
+quality of items to be modified per player as they are given by the 
+server.<br>
+<br>
+<i>You can join </i><a href="http://webchat.gamesurge.net/?channels=tf2items" target="_blank" rel="nofollow noopener">#<i>tf2items @ irc.gamesurge.net</i></a><i> if you need help with the extension.</i><br>
+<br>
+<b><u>Download &amp; Source:</u></b><br>
+<br>
+<b><a href="https://builds.limetech.io/?project=tf2items" target="_blank" rel="nofollow noopener">Download Builds</a></b><br>
+The tf2items_manager plugin does not come compiled in these builds, you will need to compile it yourself if you want to use it.<br>
+<br>
+<a href="https://github.com/asherkin/TF2Items" target="_blank" rel="nofollow noopener">Source Code</a><br>
+<br>
+<b><u>Instructions:</u></b><ol style="list-style-type: decimal"><li>Copy all files in the release package to your server maintaining the directory structure</li>
+<li>Edit tf2items.weapons.txt (In "addons/sourcemod/configs/") according to who you want to get weapons</li>
+<li>Type 'sm exts load tf2items'</li>
+<li>Join the server</li>
+<li>???</li>
+<li>Profit</li>
+</ol><br>
+<b><u>Notes:</u></b><ul><li>The attributes available for tf2items.weapons.txt are <a href="http://wiki.teamfortress.com/wiki/List_of_item_attributes" target="_blank" rel="nofollow noopener">here</a> (ignore min/max values).</li>
+<li>The first key is the number above the attribute you want, and the second is the value.</li>
+<li>If you load the extension while on the server, it will attempt to 
+hook using a player in the server, otherwise it will only take effect 
+after the next player joins.</li>
+<li>To reload the tf2items.weapons.txt file you can use 'tf2items_manager_reload'.</li>
+<li><i>The included tf2items.weapons.txt file is an example and was made very randomly.</i></li>
+</ul><br>
+<b><u>Quality Colours:</u></b><br>
+<div style="margin: 5px;"> 
+<div class="smallfont" style="margin-bottom: 2px;"> 
+<b>Spoiler</b> <input value="Show" style="margin: 0px; padding: 0px; width: 45px; font-size: 10px;" onclick="if(this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != 'inline') 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'inline'; this.innerText = ''; this.value = 'Hide'; } 
+else 
+{ this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value='Show'; }" type="button">
+</div> 
+<div class="alt2" style="border: 1px inset; padding: 6px;"> 
+<div class="spoiler" style="display: none;"><a class="proxied-img-link" href="https://i.imgur.com/53erbdK.png" rel="nofollow noopener"><img class="proxied-img" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/68747470733a2f2f692e696d6775722e636f6d2f3533657262644b2e706e.png" alt="" border="0"></a></div> 
+</div> 
+</div><br>
+<br>
+<b><u>Atributions &amp; Thanks:</u></b><ul><li>AzuiSleet - Reversed CScriptCreatedItem and released it publicly, along with writing most of the item editing code below.</li>
+<li>Damizean - Fixed padding for CScriptCreatedItem in Linux. Wrote the SourcePawn Interface and the SourceMod item manager.</li>
+<li>Voogru - Inspiring the creation of this. Helped with fixing and 
+improving the CScriptCreatedItem class used after the 119 update.</li>
+<li>Wazz - Wrote "Shit not be void" in #sourcemod and revealed that 
+GiveNamedItem returned CBaseEntity *. Helped with improving the 
+CScriptCreatedItem class.</li>
+<li>Psychonic - "How did you write the wearable natives asherkin?" "I 
+got all the code from psychonic, then disregarded it and wrote it from 
+scratch."</li>
+<li>MatthiasVance - Reminded me to comment out '#define INFINITE_PROBLEMS 1'.</li>
+<li>Drunken_F00l - Inspiring the creation of this.</li>
+</ul><br>
+<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/catface3.png" alt="" title="Cat Face" class="inlineimg" border="0">
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<font size="2"><b><a href="https://bit.ly/1uIVua4" target="_blank" rel="nofollow noopener">Spider - A Replacement Webcompiler</a></b><br>
+<a href="https://bit.ly/1Wba05p" target="_blank" rel="nofollow noopener">Accelerator - Crash Reporting That Doesn't Suck</a><br>
+<a href="https://bit.ly/1MO5PMI" target="_blank" rel="nofollow noopener">VTable.js - In-browser Virtual Function Table Dumper</a></font><font size="1"><br>
+<br>
+<a href="https://bit.ly/9mXaiD" target="_blank" rel="nofollow noopener">TF2Items</a> | <a href="https://bit.ly/9o0kLW" target="_blank" rel="nofollow noopener">SteamTools</a> | <a href="https://bit.ly/d5SMoE" target="_blank" rel="nofollow noopener">VPhysics</a> | <a href="https://bit.ly/hcSDWB" target="_blank" rel="nofollow noopener">RocketBounce</a> | <a href="https://bit.ly/mxwe3P" target="_blank" rel="nofollow noopener">Free2BeKicked</a> | <a href="https://bit.ly/runC1S" target="_blank" rel="nofollow noopener">Connect</a> | <a href="https://bit.ly/1L5Gkz5" target="_blank" rel="nofollow noopener">Webcon &amp; Conplex</a></font>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by asherkin; 11-16-2017 at <span class="time">15:28</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="asherkin is offline" title="asherkin is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050170 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050170_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">asherkin</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=59029">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=59029" rel="nofollow">Send a private message to asherkin</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://limetech.io/" rel="nofollow noopener" target="_blank">Visit asherkin's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=59029" rel="nofollow">Find More Posts by asherkin</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050170 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050170 --><!-- post #1050192 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050192" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050192 -->
+
+
+
+	<table id="post1050192" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050192">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=31784">CrimsonGT</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050192", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Veteran Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=31784">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/avatar31784_4.gif" alt="CrimsonGT's Avatar" title="CrimsonGT's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Oct 2007</div>
+
+
+
+				<div>Location: Gainesville, FL</div>
+				
+				
+				<div>
+				<!--Posts: 1,565 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_1050192">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050192"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050192#post1050192"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 07:34
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050192&amp;postcount=2" target="new" rel="nofollow" id="postcount1050192" name="2"><strong>2</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050192" style="width: 100%; display: block;">
+                				Nice job, looks well written as well.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="CrimsonGT is offline" title="CrimsonGT is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050192 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050192_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">CrimsonGT</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=31784">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=31784" rel="nofollow">Send a private message to CrimsonGT</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.tf2rocketarena.com/forums" rel="nofollow noopener" target="_blank">Visit CrimsonGT's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=31784" rel="nofollow">Find More Posts by CrimsonGT</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050192 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050192 --><!-- post #1050199 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050199" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050199 -->
+
+
+
+	<table id="post1050199" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050199">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=51683">Thrawn2</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050199", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Veteran Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=51683">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/avatar51683_1.gif" alt="Thrawn2's Avatar" title="Thrawn2's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Apr 2009</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 772 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_1050199">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050199"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050199#post1050199"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 07:57
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050199&amp;postcount=3" target="new" rel="nofollow" id="postcount1050199" name="3"><strong>3</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050199" style="width: 100%; display: block;">
+                				holy cow
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="Thrawn2 is offline" title="Thrawn2 is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050199 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050199_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Thrawn2</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=51683">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=51683" rel="nofollow">Send a private message to Thrawn2</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=51683" rel="nofollow">Find More Posts by Thrawn2</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050199 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050199 --><!-- post #1050254 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050254" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050254 -->
+
+
+
+	<table id="post1050254" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050254">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=44450">cybersquare420</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050254", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Veteran Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Nov 2008</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 631 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_1050254">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050254"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050254#post1050254"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 09:11
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050254&amp;postcount=4" target="new" rel="nofollow" id="postcount1050254" name="4"><strong>4</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050254" style="width: 100%; display: block;">
+                				link in first line of notes is broken
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a href="http://www.tiaclan.co.cc/forums/" target="_blank" rel="noopener"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/sigpic44450_2.gif" alt="" border="0"> </a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="cybersquare420 is offline" title="cybersquare420 is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050254 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050254_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">cybersquare420</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=44450">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=44450" rel="nofollow">Send a private message to cybersquare420</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.tiaclan.co.cc/forums/" rel="nofollow noopener" target="_blank">Visit cybersquare420's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=44450" rel="nofollow">Find More Posts by cybersquare420</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050254 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050254 --><!-- post #1050259 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050259" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050259 -->
+
+
+
+	<table id="post1050259" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050259">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=56529">TheSpyHunter</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050259", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Senior Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jul 2009</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 306 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_1050259">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050259"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050259#post1050259"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 09:23
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050259&amp;postcount=5" target="new" rel="nofollow" id="postcount1050259" name="5"><strong>5</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050259" style="width: 100%; display: block;">
+                				Great work,<br>
+Few questions though.<br>
+<br>
+What do these relate to?<br>
+<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">PHP Code:</div>
+	<div class="alt2" dir="ltr" style="margin: 0px; padding: 6px; border: 1px inset; width: auto; height: 178px; text-align: left; overflow: auto">
+		<code style="white-space:nowrap">
+			<!-- php buffer start --><code><span style="color: #000000">
+<span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"count"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"5"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attributes"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"132"&nbsp;&nbsp;&nbsp;&nbsp;"0"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"134"&nbsp;&nbsp;&nbsp;&nbsp;"4"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"3"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"0.17"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"97"&nbsp;&nbsp;&nbsp;&nbsp;"0.6"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"106"&nbsp;&nbsp;&nbsp;&nbsp;"0.5"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+<br></span><span style="color: #0000BB"></span>
+</span>
+</code><!-- php buffer end -->
+		</code>
+	</div>
+</div>and how do we know what o change them to?
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a class="proxied-img-link" href="http://cache.www.gametracker.com/server_info/85.234.148.137:27035/b_560_95_1.png" rel="nofollow noopener"><img class="proxied-img" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/687474703a2f2f63616368652e7777772e67616d65747261636b6572_002.png" alt="" border="0"></a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="TheSpyHunter is offline" title="TheSpyHunter is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050259 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050259_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">TheSpyHunter</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=56529">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=56529" rel="nofollow">Send a private message to TheSpyHunter</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=56529" rel="nofollow">Find More Posts by TheSpyHunter</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050259 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050259 --><!-- post #1050264 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050264" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050264 -->
+
+
+
+	<table id="post1050264" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050264">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=59029">asherkin</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050264", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					SourceMod Developer
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=59029">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/a.png" alt="asherkin's Avatar" title="asherkin's Avatar" width="100" height="100" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Aug 2009</div>
+
+
+
+				<div>Location: OnGameFrame()</div>
+				
+				
+				<div>
+				<!--Posts: 7,255 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_1050264">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050264"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050264#post1050264"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 09:28
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050264&amp;postcount=6" target="new" rel="nofollow" id="postcount1050264" name="6"><strong>6</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050264" style="width: 100%; display: block;">
+                				<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>TheSpyHunter</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=1050259#post1050259" rel="nofollow"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">Great work,<br>
+Few questions though.<br>
+<br>
+What do these relate to?<br>
+and how do we know what o change them to?</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div><div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				The attributes available for customweps.txt are <a href="http://tracker.limetech.org/projects/tf2items/repository/entry/items_game.txt" target="_blank" rel="nofollow noopener">Here</a> (at the bottom, ignore min/max values).<br>
+The first key is the number above the attribute you want, and the second is the value.<br>
+Make sure the attribute count is correct, otherwise the server will most likely crash, I do not advise going over 7-11, YMMV.
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div><div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table style="table-layout: fixed;" width="100%" cellspacing="0" cellpadding="6" border="0">
+	<tbody><tr>
+		<td class="quote" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>cybersquare420</strong>
+					<a href="https://forums.alliedmods.net/showthread.php?p=1050254#post1050254" rel="nofollow"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/viewpost.svg" alt="View Post" title="View Post" border="0"></a>
+				</div>
+				<div style="font-style:italic">link in first line of notes is broken</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>It's a self-signed SSL cert, I've swapped all links for unsecured ones.<br>
+<br>
+Also, a SourcePawn interface is also being worked on, thanks Damizean <img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/smile.gif" alt="" title="Smile" class="inlineimg" border="0">
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by asherkin; 01-10-2010 at <span class="time">09:37</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="asherkin is offline" title="asherkin is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050264 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050264_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">asherkin</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=59029">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=59029" rel="nofollow">Send a private message to asherkin</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://limetech.io/" rel="nofollow noopener" target="_blank">Visit asherkin's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=59029" rel="nofollow">Find More Posts by asherkin</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050264 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050264 --><!-- post #1050298 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050298" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050298 -->
+
+
+
+	<table id="post1050298" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050298">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=54412">Cerise</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050298", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Senior Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=54412">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/avatar54412_2.gif" alt="Cerise's Avatar" title="Cerise's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jun 2009</div>
+
+
+
+				<div>Location: debug_backtrace()</div>
+				
+				
+				<div>
+				<!--Posts: 299 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_1050298">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050298"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050298#post1050298"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 10:30
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050298&amp;postcount=7" target="new" rel="nofollow" id="postcount1050298" name="7"><strong>7</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050298" style="width: 100%; display: block;">
+                				Nice work mate !<br>
+ <br>
+Just a question : If you want to custom ALL weapons for a client, do you need to put a block for every weapons one by one ?
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a href="http://www.gametracker.com/server_info/5.135.185.33:27030/" target="_blank" rel="noopener"><img class="proxied-img" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/687474703a2f2f63616368652e7777772e67616d65747261636b65722e63.png" alt="" border="0"></a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="Cerise is offline" title="Cerise is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050298 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050298_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Cerise</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=54412">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=54412" rel="nofollow">Send a private message to Cerise</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://norealcommunity.org/" rel="nofollow noopener" target="_blank">Visit Cerise's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=54412" rel="nofollow">Find More Posts by Cerise</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050298 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050298 --><!-- post #1050301 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050301" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050301 -->
+
+
+
+	<table id="post1050301" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050301">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=59029">asherkin</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050301", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					SourceMod Developer
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=59029">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/a.png" alt="asherkin's Avatar" title="asherkin's Avatar" width="100" height="100" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Aug 2009</div>
+
+
+
+				<div>Location: OnGameFrame()</div>
+				
+				
+				<div>
+				<!--Posts: 7,255 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_1050301">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050301"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050301#post1050301"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 10:33
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050301&amp;postcount=8" target="new" rel="nofollow" id="postcount1050301" name="8"><strong>8</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050301" style="width: 100%; display: block;">
+                				At the moment, yes. In the next version I plan to 
+add wildcarding and admin flag checks, bear in mind though that you can 
+only currently edit the attributes of the base weapons, not the 
+unlockables. The quality and level are fine however.<br>
+Edit: Turns out you can edit the unlockable's attributes, bear in mind that it completely overwrites existing ones though.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<font size="2"><b><a href="https://bit.ly/1uIVua4" target="_blank" rel="nofollow noopener">Spider - A Replacement Webcompiler</a></b><br>
+<a href="https://bit.ly/1Wba05p" target="_blank" rel="nofollow noopener">Accelerator - Crash Reporting That Doesn't Suck</a><br>
+<a href="https://bit.ly/1MO5PMI" target="_blank" rel="nofollow noopener">VTable.js - In-browser Virtual Function Table Dumper</a></font><font size="1"><br>
+<br>
+<a href="https://bit.ly/9mXaiD" target="_blank" rel="nofollow noopener">TF2Items</a> | <a href="https://bit.ly/9o0kLW" target="_blank" rel="nofollow noopener">SteamTools</a> | <a href="https://bit.ly/d5SMoE" target="_blank" rel="nofollow noopener">VPhysics</a> | <a href="https://bit.ly/hcSDWB" target="_blank" rel="nofollow noopener">RocketBounce</a> | <a href="https://bit.ly/mxwe3P" target="_blank" rel="nofollow noopener">Free2BeKicked</a> | <a href="https://bit.ly/runC1S" target="_blank" rel="nofollow noopener">Connect</a> | <a href="https://bit.ly/1L5Gkz5" target="_blank" rel="nofollow noopener">Webcon &amp; Conplex</a></font>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+						<!-- edit note -->
+							<div class="smallfont">			<hr style="color:#FFFFFF" size="1">
+								<em>
+								
+									Last edited by asherkin; 01-10-2010 at <span class="time">10:52</span>.
+								
+								
+								</em>
+							</div>
+						<!-- / edit note -->
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="asherkin is offline" title="asherkin is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050301 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050301_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">asherkin</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=59029">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=59029" rel="nofollow">Send a private message to asherkin</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://limetech.io/" rel="nofollow noopener" target="_blank">Visit asherkin's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=59029" rel="nofollow">Find More Posts by asherkin</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050301 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050301 --><!-- post #1050314 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050314" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+<table id="post1050314" class="tborder" style="border-top: 2px solid #006699;" width="100%" cellspacing="1" cellpadding="6" border="0" align="center">
+<tbody><tr title="Post 1050314">
+	<td class="thead" style="font-weight:normal;background:url('images/gradients/gradient_tcat.gif') repeat-x scroll left top #C7D0D7;color:#000000">
+		
+		
+		<a name="post1050314"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+		01-10-2010, 10:44 
+	</td>
+</tr>
+<tr>
+	<td class="alt2">
+		
+		<a href="https://forums.alliedmods.net/member.php?u=54412">Cerise</a>
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+
+		<div class="smallfont">
+			This message has been deleted by <a href="https://forums.alliedmods.net/member.php?u=54412">Cerise</a>.
+			Reason: <em>Double Post</em>
+		</div>
+
+	</td>
+</tr>
+</tbody></table>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050314 --><!-- post #1050329 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050329" style="padding:0px 0px 0px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<!-- post #1050329 -->
+
+
+
+	<table id="post1050329" class="tinside" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+		<td class="alt2" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050329">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=54412">Cerise</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050329", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Senior Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+				<div class="smallfont" style="margin: 0.5em;"><a href="https://forums.alliedmods.net/member.php?u=54412">
+					
+						<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/avatar54412_2.gif" alt="Cerise's Avatar" title="Cerise's Avatar" border="0"></a>
+					
+				</div>
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jun 2009</div>
+
+
+
+				<div>Location: debug_backtrace()</div>
+				
+				
+				<div>
+				<!--Posts: 299 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+        	<td class="alt2" style="margin-left: 175px;" id="td_post_1050329">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050329"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050329#post1050329"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 11:11
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050329&amp;postcount=9" target="new" rel="nofollow" id="postcount1050329" name="9"><strong>9</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050329" style="width: 100%; display: block;">
+                				Concerning the attribute "134" ( Attach Particle effect ),<br>
+where should i find which number corresponds to which effect ?
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a href="http://www.gametracker.com/server_info/5.135.185.33:27030/" target="_blank" rel="noopener"><img class="proxied-img" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/687474703a2f2f63616368652e7777772e67616d65747261636b65722e63.png" alt="" border="0"></a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+		<td class="alt2" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="Cerise is offline" title="Cerise is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+		<td class="alt2" style="border-top: 1px solid #FFFFFF;" align="left">
+        
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050329 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050329_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Cerise</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=54412">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=54412" rel="nofollow">Send a private message to Cerise</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://norealcommunity.org/" rel="nofollow noopener" target="_blank">Visit Cerise's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=54412" rel="nofollow">Find More Posts by Cerise</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050329 popup menu -->
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050329 --><!-- post #1050333 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+	<div id="edit1050333" style="padding:0px 0px 0px 0px">
+	
+
+
+
+<!-- post #1050333 -->
+
+	<table id="post1050333" class="tbottom" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+	<tbody><tr>
+	    	
+	        	
+	        		<td class="bpost" colspan="2"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif"></td>
+	        	
+	        
+	</tr>
+	<tr valign="top">
+	
+        
+        	<td class="alt3" style="width: 175px; border-right: 1px solid #FFFFFF;" valign="top">
+        
+			
+			<div id="postmenu_1050333">
+	                        
+				
+					<a class="bigusername" href="https://forums.alliedmods.net/member.php?u=56529">TheSpyHunter</a>
+					<script type="text/javascript"> vbmenu_register("postmenu_1050333", true); </script>
+				
+			</div>
+				
+			
+				<div class="smallfont">
+					Senior Member
+				</div>
+			
+			
+			
+
+			
+			
+			
+	
+			<div class="smallfont">
+					
+				<div>Join Date: Jul 2009</div>
+
+
+
+				
+				
+				
+				<div>
+				<!--Posts: 306 -->
+				</div>
+				
+					
+			</div>
+			
+			<img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_spacer.gif" valign="top" height="1" border="0">
+		
+		</td>
+
+        
+		<td class="alt3" style="margin-left: 175px;" id="td_post_1050333">
+        
+			<!-- icon and title -->
+			<table style="table-layout: fixed;" width="100%" height="5">
+				<tbody><tr>
+					<td align="left">
+						<div class="smalltext" style="height: 15px; margin: 0px; padding-bottom: 3px; overflow: hidden; vertical-align: top; ">
+
+								
+								<!-- status icon and date -->
+								<a name="post1050333"> </a> <a href="https://forums.alliedmods.net/showthread.php?p=1050333#post1050333"> <img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/post_old.svg" alt="Old" title="Old" border="0"></a>
+								 
+								01-10-2010
+								
+								
+									, 11:14
+								
+								
+								
+                        					&nbsp;
+                        					
+								
+									 Re: [EXTENSION] TF2Items
+								
+							
+						</div>
+					</td>
+					<td align="right">
+						<!-- controls -->
+						
+						
+						
+						
+						
+						
+		
+						
+						
+							
+						
+						 
+							#<a href="https://forums.alliedmods.net/showpost.php?p=1050333&amp;postcount=10" target="new" rel="nofollow" id="postcount1050333" name="10"><strong>10</strong></a>
+						
+						
+
+						
+						<!-- / controls -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="left"> 
+						<hr style="color:#D1D7DC; background-color:#D1D7DC;" size="1" color="#D1D7DC">
+						<!-- / icon and title -->
+
+						
+						
+						<!-- message -->
+                					<div id="post_message_1050333" style="width: 100%; display: block;">
+                				I copied everything to my server, changed the 
+default id to mine and added another admin (lets call him admin(2)), 
+leaving everything else as default.<br>
+<br>
+I rebooted the server then ran the command, waited for admin(2) to join.<br>
+<br>
+I killed them and no weapon showed, they killed me and no weapon showed.<br>
+<br>
+Running mm1.8 sm 1.3, windows.
+                				</div>
+						<!-- / message -->
+	
+						
+						
+						
+						
+						
+							<!-- sig -->
+		__________________<br>					
+<div style="max-width: 600px; max-height: 131px; _width: 600px; _height: 131px; overflow: hidden;">
+								
+
+<a class="proxied-img-link" href="http://cache.www.gametracker.com/server_info/85.234.148.137:27035/b_560_95_1.png" rel="nofollow noopener"><img class="proxied-img" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/687474703a2f2f63616368652e7777772e67616d65747261636b6572_002.png" alt="" border="0"></a>
+							</div>
+							<!-- / sig -->
+						
+						
+						
+						
+						
+	
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+	<tr>
+        
+        	<td class="alt3" style="border-right: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF;">
+        
+			<img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/user_offline.svg" alt="TheSpyHunter is offline" title="TheSpyHunter is offline" border="0">
+
+
+			
+			
+				
+				
+				
+			
+			
+			
+
+                        
+                        
+                         
+		</td>
+	
+        	<td class="alt3" style="border-top: 1px solid #FFFFFF;" align="left">
+	
+        		<table>
+        			<tbody><tr>
+        				<td>
+        					    
+        				</td>
+        				<td align="right">
+        					
+                                                
+        				</td>
+        			</tr>
+        		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<!-- post 1050333 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1050333_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">TheSpyHunter</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/member.php?u=56529">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/private.php?do=newpm&amp;u=56529" rel="nofollow">Send a private message to TheSpyHunter</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="https://forums.alliedmods.net/search.php?do=finduser&amp;u=56529" rel="nofollow">Find More Posts by TheSpyHunter</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1050333 popup menu -->
+
+
+
+    </div>
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1050333 --><div id="lastpost"></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+<!-- / start content table -->
+<!-- controls below postbits -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr valign="top">
+	
+		<td class="smallfont" style="padding-top: 4px; width: 90px;"><a href="https://forums.alliedmods.net/newreply.php?do=newreply&amp;noquote=1&amp;p=1050333" rel="nofollow"><img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/threadclosed.gif" alt="Closed Thread" title="Closed Thread" border="0"></a> 
+</td><td style="padding-top: 10px;" align="left">
+<!-- BreadCrumbs -->
+<div class="bcrumbs">
+<a href="https://forums.alliedmods.net/index.php" accesskey="1"><strong>AlliedModders Forum Index</strong></a><strong>
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=55">Hosted Stuff</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=144">Asherkin's Plugins</a></span>
+
+
+	<span class="navbar">&gt; <a href="https://forums.alliedmods.net/forumdisplay.php?f=146">TF2Items</a></span>
+
+</strong> </div>
+<!-- / BreadCrumbs -->
+
+ </td>
+		
+	
+		<td style="border-width: 1px;" align="right"><div class="pagenav" align="right">
+<table class="tborder" cellspacing="1" cellpadding="3" border="0">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight:normal">Page 1 of 153</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 1,525"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=2" title="Show results 11 to 20 of 1,525">2</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=3" title="Show results 21 to 30 of 1,525">3</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=11" title="Show results 101 to 110 of 1,525"><!--+10-->11</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=51" title="Show results 501 to 510 of 1,525"><!--+50-->51</a></td><td class="alt1"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=101" title="Show results 1,001 to 1,010 of 1,525"><!--+100-->101</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=2" title="Next Page - Results 11 to 20 of 1,525">&gt;</a></td>
+	<td class="alt1" nowrap="nowrap"><a class="smallfont" href="https://forums.alliedmods.net/showthread.php?t=115100&amp;page=153" title="Last Page - Results 1,521 to 1,525 of 1,525">Last <strong>»</strong></a></td>
+	<td class="vbmenu_control" title="" id="pagenav.199" style="cursor: pointer;"> <img src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/menu_open.svg" title="" alt="" border="0"></td>
+</tr>
+</tbody></table>
+</div>
+						
+		</td>
+	
+</tr>
+</tbody></table>
+
+<!-- / controls below postbits -->
+
+
+
+
+<br>
+
+<div class="smallfont" align="center">
+	<strong>«</strong>
+		<a href="https://forums.alliedmods.net/showthread.php?t=115100&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+		|
+		<a href="https://forums.alliedmods.net/showthread.php?t=115100&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>»</strong>
+</div>
+
+
+<br>
+
+
+
+
+
+
+
+
+<!-- currently active users -->
+
+<!-- end currently active users -->
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=115100&amp;pollid=" method="post" name="threadadminform">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/printer.gif" alt="Show Printable Version" title="Show Printable Version"> <a href="https://forums.alliedmods.net/printthread.php?t=115100" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/sendtofriend.gif" alt="Email this Page" title="Email this Page"> <a href="https://forums.alliedmods.net/sendmessage.php?do=sendtofriend&amp;t=115100" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- Plugin Approve / Unapprove Form -->
+<form name="plugin_a_u" method="post" action="showthread.php?t=115100">
+<input type="hidden" name="userid" value="">
+<input type="hidden" name="postid" value="">
+<input type="hidden" name="threadid" value="">
+<input type="hidden" name="pdo" value="">
+<input type="hidden" name="s" value="">
+<input type="hidden" name="securitytoken" value="guest">
+</form>
+<!-- / Plugin Approve / Unnaprove Form -->
+
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellspacing="1" cellpadding="4" border="0">
+	<tbody><tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/mode_linear.gif" alt="Linear Mode" title="Linear Mode"> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/mode_hybrid.gif" alt="Hybrid Mode" title="Hybrid Mode"> <a href="https://forums.alliedmods.net/showthread.php?mode=hybrid&amp;t=115100">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/mode_threaded.gif" alt="Threaded Mode" title="Threaded Mode"> <a href="https://forums.alliedmods.net/showthread.php?p=1050170&amp;mode=threaded#post1050170">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" width="210" cellspacing="1" cellpadding="6" border="0">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="TF2Items%20-%20Items%20with%20custom%20attributes.%20-%20AlliedModders_fichiers/collapse_thead.svg" alt="" border="0"></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr>
+		
+		<div><a href="https://forums.alliedmods.net/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+		<hr>
+		<div><a href="https://forums.alliedmods.net/misc.php?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellspacing="0" cellpadding="0" border="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="">
+	<input type="hidden" name="daysprune" value="">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="129" class="fjdpth0"> Server Discussion</option>
+<option value="130" class="fjdpth1">&nbsp; &nbsp;  Source Servers (SRCDS)</option>
+<option value="131" class="fjdpth1">&nbsp; &nbsp;  HL1 Servers (HLDS)</option>
+<option value="3" class="fjdpth0"> AMX Mod X</option>
+<option value="16" class="fjdpth1">&nbsp; &nbsp;  News</option>
+<option value="105" class="fjdpth1">&nbsp; &nbsp;  Bug Reports</option>
+<option value="7" class="fjdpth1">&nbsp; &nbsp;  General</option>
+<option value="161" class="fjdpth1">&nbsp; &nbsp;  Off-Topic</option>
+<option value="79" class="fjdpth1">&nbsp; &nbsp;  Plugins</option>
+<option value="12" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Suggestions / Requests</option>
+<option value="8" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Approved Plugins</option>
+<option value="26" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  New Plugin Submissions</option>
+<option value="27" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Unapproved/Old Plugins</option>
+<option value="25" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Translation Request</option>
+<option value="85" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  High-Traffic Plugins</option>
+<option value="104" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  GunGame</option>
+<option value="95" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  UAIO (Ultimate All-In-One Plugin)</option>
+<option value="128" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  xREDIRECT</option>
+<option value="88" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CSDM</option>
+<option value="111" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  AMX Super</option>
+<option value="113" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  RuneMod</option>
+<option value="126" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Zombie Plague Mod</option>
+<option value="30" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SuperHero Mod</option>
+<option value="41" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  News</option>
+<option value="36" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Tech Support</option>
+<option value="43" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Scripting Help</option>
+<option value="38" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Off-Topic / General Chat</option>
+<option value="84" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Heroes</option>
+<option value="44" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Suggestions / Requests</option>
+<option value="51" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Approved Heroes</option>
+<option value="35" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  New Submissions</option>
+<option value="91" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Unapproved/Old Heroes</option>
+<option value="100" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Module Heroes</option>
+<option value="50" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SuperHero Mod Stats - By 123</option>
+<option value="48" class="fjdpth4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (OLD) Bug Reports</option>
+<option value="78" class="fjdpth1">&nbsp; &nbsp;  Scripting</option>
+<option value="11" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Scripting Help</option>
+<option value="83" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Code Snippets/Tutorials</option>
+<option value="9" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Module Coding</option>
+<option value="160" class="fjdpth1">&nbsp; &nbsp;  Donor Access</option>
+<option value="52" class="fjdpth0"> SourceMod</option>
+<option value="59" class="fjdpth1">&nbsp; &nbsp;  News</option>
+<option value="58" class="fjdpth1">&nbsp; &nbsp;  General</option>
+<option value="123" class="fjdpth1">&nbsp; &nbsp;  Plugins</option>
+<option value="108" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Plugins</option>
+<option value="109" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Unapproved Plugins</option>
+<option value="60" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Plugin/Gameplay Ideas and Requests</option>
+<option value="153" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  High-Traffic Plugins</option>
+<option value="133" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SourceMod Anti-Cheat</option>
+<option value="132" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Zombie:Reloaded</option>
+<option value="152" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SourceBans</option>
+<option value="154" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  VSH / Freak Fortress</option>
+<option value="157" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Store</option>
+<option value="155" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SM_Hosties</option>
+<option value="156" class="fjdpth3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  HLstatsX:CE</option>
+<option value="107" class="fjdpth1">&nbsp; &nbsp;  Scripting</option>
+<option value="134" class="fjdpth1">&nbsp; &nbsp;  Extensions</option>
+<option value="112" class="fjdpth1">&nbsp; &nbsp;  Snippets and Tutorials</option>
+<option value="125" class="fjdpth1">&nbsp; &nbsp;  Donor Access</option>
+<option value="56" class="fjdpth1">&nbsp; &nbsp;  Metamod: Source</option>
+<option value="76" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Metamod:Source Plugins</option>
+<option value="74" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Metamod:Source Questions</option>
+<option value="75" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Coding MM:S Plugins &amp; SM Extensions</option>
+<option value="55" class="fjdpth0"> Hosted Stuff</option>
+<option value="144" class="fjdpth1">&nbsp; &nbsp;  Asherkin's Plugins</option>
+<option value="146" class="fjsel" selected="selected">&nbsp; &nbsp; &nbsp; &nbsp;  TF2Items</option>
+<option value="145" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  TFDodgeball</option>
+<option value="147" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  SteamTools</option>
+<option value="82" class="fjdpth1">&nbsp; &nbsp;  Bail's Plugins</option>
+<option value="87" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  CSDM</option>
+<option value="77" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  CS:S DM</option>
+<option value="162" class="fjdpth0"> Off-Topic &amp; Trash</option>
+<option value="15" class="fjdpth1">&nbsp; &nbsp;  Off-Topic</option>
+<option value="22" class="fjdpth1">&nbsp; &nbsp;  Trash</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go">
+	</form>
+</div>
+			</td>
+		</tr>		
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 10px 0px 10px" align="left">
+
+<br>
+<div class="smallfont" align="center">All times are GMT -4. The time now is <span class="time">04:30</span>.</div>
+<br>
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<form action="index.php" method="get">
+	
+<table class="page" width="100%" cellspacing="0" cellpadding="6" border="0" align="center">
+<tbody><tr>
+	
+	
+	<td class="tfoot" width="100%" align="right">
+		<div class="smallfont">
+			<strong>
+				
+				<a href="https://alliedmods.net/dmca">DMCA</a> -
+				
+				
+				<a href="https://forums.alliedmods.net/archive/index.php">Archive</a> -
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+<br>
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin®<br>Copyright ©2000 - 2019, vBulletin Solutions, Inc.<br>
+	<!-- Do not remove this copyright notice -->
+	Theme made by Freecode
+	</div>
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	
+	</div>
+</div>
+
+</form>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+
+</script>
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+
+</body></html>
